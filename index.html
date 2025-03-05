@@ -3,112 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manit Dangal - Developer, Tech Enthusiast, Musician. Combining creativity with technology to innovate and inspire.">
+    <meta name="keywords" content="Manit Dangal, Developer, Musician, C++, Python, Backend Development, AI, Open Source, Tech Education">
+    <meta name="author" content="Manit Dangal">
+    <meta property="og:title" content="Manit Dangal - Creative Developer">
+    <meta property="og:description" content="Blending coding and music, Manit Dangal is a passionate developer and musician creating impactful solutions.">
+    <meta property="og:image" content="-to-image.jpg">
+    <meta property="og:url" content="https://www.manitdangal.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manit Dangal - Creative Developer">
+    <meta name="twitter:description" content="Exploring the intersection of technology and creativity through coding and music.">
+    <meta name="twitter:image" content="path-to-image.jpg">
     <title>Manit Dangal - Creative Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        :root {
+            --primary: #00f3ff;
+            --secondary: #8a2be2;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                        url('../manitt.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
+            gap: 1.5rem;
+            align-content: start;
+            margin-top: 2.1cm;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .services {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), transparent);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .about, .services {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            color: var(--light);
+            font-size: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .social-icon:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+            text-decoration: none;
+        }
+
+        .social-text {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .social-icon:hover .social-text {
+            opacity: 1;
+        }
+
+        .bio {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .bio p strong {
+            color: #2a9d8f;
+        }
+
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,243,255,0.2);
+        }
+
+        .social-icon:hover i {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content animate">
             <h1>Code by Day, Music by Night</h1>
             <p class="subtext">Exploring the harmony between technology and creativity</p>
-          
         
-        <!-- Social Links -->
-<div class="social-links animate">
-    <a href="https://www.tiktok.com/@manit.025" target="_blank" class="social-icon">
-        <i class="fab fa-tiktok"></i>
-        <span class="social-text">TikTok</span>
-    </a>
-    <a href="https://www.linkedin.com/in/manit-dangal-b86186324/" target="_blank" class="social-icon">
-        <i class="fab fa-linkedin-in"></i>
-        <span class="social-text">LinkedIn</span>
-    </a>
-    <a href="https://www.youtube.com/@MANITDANGAL1125" target="_blank" class="social-icon">
-        <i class="fab fa-youtube"></i>
-        <span class="social-text">YouTube</span>
-    </a>
-    <a href="https://github.com/manitdangal" target="_blank" class="social-icon">
-        <i class="fab fa-github"></i>
-        <span class="social-text">GitHub</span>
-    </a>
-</div>
-
-</div>
+            <div class="social-links animate">
+                <a href="https://www.tiktok.com/@manit.025" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="social-text">TikTok</span>
+                </a>
+                <a href="https://www.linkedin.com/in/manit-dangal-b86186324/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-text">LinkedIn</span>
+                </a>
+                <a href="https://www.youtube.com/@MANITDANGAL1125" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                    <span class="social-text">YouTube</span>
+                </a>
+                <a href="https://github.com/manitdangal" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                    <span class="social-text">GitHub</span>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- About Section -->
     <section class="about">
         <div class="about-content animate">
             <h2>Hey! I'm Manit Dangal</h2>
             <div class="bio">
-                
-                <p>
-                    I’m <strong>Manit Dangal</strong>, an 18-year-old <strong>developer, tech enthusiast, and musician</strong> who thrives at the intersection of 
-                    <strong>technology and creativity</strong>.
-                </p>
-            
-                <p>
-                    💻 <strong>Tech & Coding:</strong>  
-                    With a strong passion for <strong>Python, C++, and backend development</strong>, I love turning complex challenges into 
-                    <strong>innovative, real-world solutions</strong>. I actively contribute to <strong>open-source projects</strong>, explore 
-                    <strong>AI and automation</strong>, and constantly push the boundaries of what's possible with code.
-                </p>
-            
-                <p>
-                    🎸 <strong>Music & Creativity:</strong>  
-                    Beyond coding, I'm also a <strong>musician and guitarist</strong>, composing original pieces and experimenting with sound to 
-                    express emotions through music. To me, <strong>coding is like composing music</strong>—both require structure, harmony, 
-                    and a touch of creativity.
-                </p>
-            
-                <p>
-                    📚 <strong>Content Creation & Education:</strong>  
-                    I create <strong>tech educational content</strong>, breaking down <strong>programming concepts</strong> into simple, 
-                    beginner-friendly insights. My goal is to <strong>empower others</strong> by making technology more accessible and 
-                    inspiring the next generation of developers.
-                </p>
-            
-                <p>
-                    🚀 <strong>My Mission:</strong>  
-                    I aim to <strong>build impactful solutions, innovate with technology, and create music that resonates</strong>. 
-                    Whether it's writing elegant code or composing a melody, I'm here to <strong>blend logic and artistry into something meaningful</strong>.
-                </p>
+                <p>I’m <strong>Manit Dangal</strong>, an 18-year-old <strong>developer, tech enthusiast, and musician</strong> who thrives at the intersection of <strong>technology and creativity</strong>.</p>
+                <p>💻 <strong>Tech & Coding:</strong> With a strong passion for <strong>Python, C++, and backend development</strong>, I love turning complex challenges into <strong>innovative, real-world solutions</strong>.</p>
+                <p>🎸 <strong>Music & Creativity:</strong> Beyond coding, I'm also a <strong>musician and guitarist</strong>, composing original pieces and experimenting with sound to express emotions through music.</p>
+                <p>📚 <strong>Content Creation & Education:</strong> I create <strong>tech educational content</strong> to make programming accessible to beginners.</p>
+                <p>🚀 <strong>My Mission:</strong> I aim to <strong>build impactful solutions, innovate with technology, and create music that resonates</strong>.</p>
             </div>
-            
         </div>
-        <!-- Add more skill items -->
+
         <div class="skills-grid">
             <div class="skill-item animate">
                 <i class="fab fa-python"></i>
                 <h3>Python Development</h3>
             </div>
-              <!-- C++ Development Card -->
-    <div class="skill-item animate">
-        <i class="fab fa-cplusplus"></i>  <!-- Assuming you want to use an icon for C++ -->
-        <h3>C++ Development</h3>
-    </div>
-
-    <!-- Guitar Card -->
-    <div class="skill-item animate">
-        <i class="fas fa-guitar"></i>  <!-- Assuming you want to use an icon for Guitar -->
-        <h3>Guitar Playing</h3>
-    </div>
-    </div>
+            <div class="skill-item animate">
+                <i class="fab fa-cplusplus"></i>
+                <h3>C++ Development</h3>
+            </div>
+            <div class="skill-item animate">
+                <i class="fas fa-guitar"></i>
+                <h3>Guitar Playing</h3>
+            </div>
+        </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services">
         <div class="service-card animate">
             <i class="fas fa-guitar"></i>
             <h3>Music & Composition</h3>
             <p>Guitarist, AI-generated songs</p>
         </div>
-        <!-- Add more service cards -->
     </section>
 
-    <script src="js/script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.transform = 'translateY(-5px)';
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
