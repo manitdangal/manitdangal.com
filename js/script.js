@@ -28,3 +28,13 @@ document.querySelectorAll('.service-card').forEach(card => {
         card.style.transform = 'translateY(0)';
     });
 });
+
+// Social icons hover effect
+document.querySelectorAll('.social-icon').forEach(icon => {
+    icon.addEventListener('mouseenter', () => {
+        icon.style.transform = 'translateY(-5px)';
+    });
+    icon.addEventListener('mouseleave', () => {
+        icon.style.transform = 'translateY(0)';
+    });
+});

@@ -22,7 +22,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                url('../assets/images/manit.jpg') center/cover;
+                url('../assets/images/manitt.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,15 +48,21 @@ color: transparent;
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
     gap: 1.5rem;
+    align-content: start;
+    margin-top: 2.1cm;
 }
 
 .skill-item {
-    background: rgba(255,255,255,0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Services Section */
@@ -84,4 +90,99 @@ color: transparent;
     .hero-content h1 {
         font-size: 2.5rem;
     }
+}
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.social-icon {
+    color: var(--light);
+    font-size: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the text color consistent */
+}
+
+.social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.social-text {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.social-icon:hover .social-text {
+    opacity: 1;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.social-icon:hover i {
+    animation: pulse 1s infinite;
+}
+
+
+.bio {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;  /* Slightly darker background for the bio section */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio h2 {
+    text-align: center;
+    color: #fff;  /* White text for the header */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;  /* Lighter gray for better readability */
+    margin-bottom: 15px;
+}
+
+.bio p strong {
+    color: #2a9d8f;  /* Teal color for emphasized text */
+}
+
+.bio p span {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.bio p:first-child {
+    margin-top: 0;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
 }
