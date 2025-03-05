@@ -22,7 +22,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                url('../assets/manitt.jpg') center/cover;
+                url('../manitt.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
