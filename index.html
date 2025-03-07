@@ -1,309 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manit Dangal - Developer, Tech Enthusiast, Musician. Combining creativity with technology to innovate and inspire.">
-    <meta name="keywords" content="Manit Dangal, Developer, Musician, C++, Python, Backend Development, AI, Open Source, Tech Education">
-    <meta name="author" content="Manit Dangal">
-    <meta property="og:title" content="Manit Dangal - Creative Developer">
-    <meta property="og:description" content="Blending coding and music, Manit Dangal is a passionate developer and musician creating impactful solutions.">
-    <meta property="og:image" content="-to-image.jpg">
-    <meta property="og:url" content="https://www.manitdangal.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Manit Dangal - Creative Developer">
-    <meta name="twitter:description" content="Exploring the intersection of technology and creativity through coding and music.">
-    <meta name="twitter:image" content="path-to-image.jpg">
-    <title>Manit Dangal - Creative Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00f3ff;
-            --secondary: #8a2be2;
-            --dark: #0a0a0a;
-            --light: #ffffff;
-        }
+  <head>
+    <title>Manit Dangal Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-        body {
-            background-color: var(--dark);
-            color: var(--light);
-            overflow-x: hidden;
-        }
+    <link rel="stylesheet" href="css/aos.css">
 
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                        url('../manitt.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        .hero-content h1 {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent; 
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
 
-        .about {
-            padding: 5rem 10%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
-            gap: 1.5rem;
-            align-content: start;
-            margin-top: 2.1cm;
-        }
+<style>
 
-        .skill-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            min-height: 180px;
-            display: flex;
-            flex-direction: column;
-        }
+/*======================================
+//--//-->   ABOUT
+======================================*/
 
-        .services {
-            padding: 5rem 10%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
-        .service-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.05), transparent);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
-        }
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
 
-        @media (max-width: 768px) {
-            .about, .services {
-                grid-template-columns: 1fr;
-            }
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-        }
+.about-mf .about-img img {
+  margin-left: 10px;
+}
 
-        .social-links {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-            justify-content: center;
-        }
 
-        .social-icon {
-            color: var(--light);
-            font-size: 1.5rem;
-            position: relative;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            padding: 0.5rem;
-            text-decoration: none;
-            color: inherit;
-        }
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
 
-        .social-icon:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-            text-decoration: none;
-        }
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
 
-        .social-text {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 0.3rem 0.8rem;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            white-space: nowrap;
-        }
 
-        .social-icon:hover .social-text {
-            opacity: 1;
-        }
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
 
-        .bio {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #222;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
 
-        .bio h2 {
-            text-align: center;
-            color: #fff;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-        .bio p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #ddd;
-            margin-bottom: 15px;
-        }
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
 
-        .bio p strong {
-            color: #2a9d8f;
-        }
 
-        .animate {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-        }
+/* project image zoom effect */
 
-        .animate.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,243,255,0.2);
-        }
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
 
-        .social-icon:hover i {
-            animation: pulse 1s infinite;
-        }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
+</style>
 
-    </style>
-</head>
-<body>
-    <section class="hero">
-        <div class="hero-content animate">
-            <h1>Code by Day, Music by Night</h1>
-            <p class="subtext">Exploring the harmony between technology and creativity</p>
-        
-            <div class="social-links animate">
-                <a href="https://www.tiktok.com/@manit.025" target="_blank" class="social-icon">
-                    <i class="fab fa-tiktok"></i>
-                    <span class="social-text">TikTok</span>
-                </a>
-                <a href="https://www.linkedin.com/in/manit-dangal-b86186324/" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span class="social-text">LinkedIn</span>
-                </a>
-                <a href="https://www.youtube.com/@MANITDANGAL1125" target="_blank" class="social-icon">
-                    <i class="fab fa-youtube"></i>
-                    <span class="social-text">YouTube</span>
-                </a>
-                <a href="https://github.com/manitdangal" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
-                    <span class="social-text">GitHub</span>
-                </a>
-            </div>
-        </div>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Manit Dangal</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Manit Dangal</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Coder  ',
+						'Content Creater ',
+						'Guitarist   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Junior Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.youtube.com/@MANITDANGAL1125" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="https://github.com/ManitDangal" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
     </section>
 
-    <section class="about">
-        <div class="about-content animate">
-            <h2>Hey! I'm Manit Dangal</h2>
-            <div class="bio">
-                <p>I’m <strong>Manit Dangal</strong>, an 18-year-old <strong>developer, tech enthusiast, and musician</strong> who thrives at the intersection of <strong>technology and creativity</strong>.</p>
-                <p>💻 <strong>Tech & Coding:</strong> With a strong passion for <strong>Python, C++, and backend development</strong>, I love turning complex challenges into <strong>innovative, real-world solutions</strong>.</p>
-                <p>🎸 <strong>Music & Creativity:</strong> Beyond coding, I'm also a <strong>musician and guitarist</strong>, composing original pieces and experimenting with sound to express emotions through music.</p>
-                <p>📚 <strong>Content Creation & Education:</strong> I create <strong>tech educational content</strong> to make programming accessible to beginners.</p>
-                <p>🚀 <strong>My Mission:</strong> I aim to <strong>build impactful solutions, innovate with technology, and create music that resonates</strong>.</p>
-            </div>
-        </div>
 
-        <div class="skills-grid">
-            <div class="skill-item animate">
-                <i class="fab fa-python"></i>
-                <h3>Python Development</h3>
-            </div>
-            <div class="skill-item animate">
-                <i class="fab fa-cplusplus"></i>
-                <h3>C++ Development</h3>
-            </div>
-            <div class="skill-item animate">
-                <i class="fas fa-guitar"></i>
-                <h3>Guitar Playing</h3>
-            </div>
-        </div>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Manit Dangal</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Programmer</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years</span></p>
+										<p><span class="title-s">Address: </span> <span>Panchkhal, Nepal</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>PYTHON</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>C++</span> <span class="pull-right">20%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Guitar Playing</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>AI</span> <span class="pull-right">20%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Video Editing</span> <span class="pull-right">25%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With a strong foundation in backend development, C++, Python, and a passion for technology, I have been actively contributing to open-source projects and educational content.  
+									Proficient in programming, video editing, and AI-generated music creation, I specialize in problem-solving, software development, and content creation.  
+									Dedicated to building impactful solutions while blending technology with creativity. </p>
+								 
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Programmer &amp; Musician</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Software Development, Open-Source, AI-Generated Music, and Tech Education</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Computer Science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Nepali, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>None (Currently focusing on backend development and AI tools)</span></li>  
+                                  <li class="d-flex"><span>Other Skills:</span> <span>Python, C++, Java, HTML, CSS, Git, Premiere Pro, Unreal Engine Modding, and Video Editing</span></li>  
+
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Gaming, Guitar Playing & Singing</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="3">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/ManitDangal/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </section>
 
-    <section class="services">
-        <div class="service-card animate">
-            <i class="fas fa-guitar"></i>
-            <h3>Music & Composition</h3>
-            <p>Guitarist, AI-generated songs</p>
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+			<p>Passionate developer and tech enthusiast with expertise in backend development, C++, Python, and AI-generated music. Skilled in software development, video editing, and open-source contributions, with a strong focus on innovation and problem-solving.</p>
+
+          </div>
         </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2025-Present</span> <br> 
+						<span class="position">Independent Developer & Content Creator</span>  
+						<p class="mt-4">Passionate about software development, AI-generated music, and tech education. Actively contributing to open-source projects and creating educational content.  
+							<ul>  
+								<li>Developed backend solutions and applications using Python and C++, focusing on performance and scalability.</li>  
+								<li>Created AI-generated music and video content, gaining engagement across digital platforms.</li>  
+								<li>Explored Unreal Engine modding and game development, enhancing gaming experiences.</li>  
+								<li>Contributed to open-source projects, collaborating with the developer community.</li>  
+							</ul>  
+						</p>
+						<h2>Student of Computer Science</h2>  
+
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<!-- <div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>TITTLE</h2>
+						<span class="position">....</span>
+						<p class="mt-4">
+							<ul>
+								<li> </li>
+								<li>  </li>
+								<li>  </li>
+							</ul>
+						</p>
+					</div> -->
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024 - Current</span>
+    					<h2>Computer Science</h2>
+    					<span class="position">Banepa NIST Secondary School</span>
+    					<!-- <p class="mt-4"></p> -->
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014 - 2024</span>
+    					<h2>School Level</h2>
+    					<span class="position">Saraswati sikshys Griha Secondary School</span>
+    					<p class="mt-4">Grade: A </p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
     </section>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+   
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample projects</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/manitdangal/Periodic-table" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-        document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
+                <h3 class="heading"><a href="https://github.com/ManitDangal">periodic Table</a></h3>
+                <p>A periodic table about every elements hyperlinked </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/ManitDangal/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
+                <h3 class="heading"><a href="https://github.com/ManitDangal/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>
+                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/ManitDangal/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-        document.querySelectorAll('.social-icon').forEach(icon => {
-            icon.addEventListener('mouseenter', () => {
-                icon.style.transform = 'translateY(-5px)';
-            });
-            icon.addEventListener('mouseleave', () => {
-                icon.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
-</body>
+                <h3 class="heading"><a href="https://github.com/ManitDangal/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
+                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		// added justify-content-center to center align the last two projects 
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ManitDangal/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ManitDangal/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ManitDangal/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ManitDangal/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div> -->
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="0">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/ManitDangal" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Panchkhal, Nepal</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+977 9817879784">+977 9817879784</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">dangal.manit@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="#" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@MANITDANGAL1125"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/manit-dangal-b86186324/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/ManitDangal"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100093636701054"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.tiktok.com/@manit.025" target="_blank" class="social-icon"> <i class="fab fa-tiktok"></i><span class="social-text"></span></a></li>
+					  
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+	
+	<!-- | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
