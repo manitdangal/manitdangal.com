@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guitar Setup Links</title>
+<style>
+  body {
+    background: radial-gradient(circle at top, #1e1f29, #111);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    opacity: 0.7;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .link {
+    width: 90%;
+    max-width: 400px;
+    background: #00bcd4;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+
+  .link:hover {
+    background: #0097a7;
+    transform: translateY(-3px);
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+  <h1>🎸 Guitar Essentials</h1>
+  <p>Download and shop the tools I use for my setup</p>
+
+  <div class="links" id="links-container"></div>
+
+  <footer>© 2025 Manit Dangal</footer>
+
+<script>
+  // 🧠 Add your links here
+  const links = [
+    { name: "🤖 Insta Doodles Bot (GitHub)", url: "https://github.com/manitdangal/InstaDoodles" },
+    { name: "🎛️ ToneLib GFX (Amp & FX Simulator)", url: "https://tonelib.net/downloads.html" },
+    { name: "🎧 ASIO4ALL Driver (Windows Audio)", url: "https://asio4all.org/about/download-asio4all/" },
+    { name: "🔌 Guitar Wire on Daraz", url: "https://s.daraz.com.np/s.KZ3g?cc" }
+  ];
+
+  const container = document.getElementById("links-container");
+
+  links.forEach(link => {
+    const a = document.createElement("a");
+    a.href = link.url;
+    a.textContent = link.name;
+    a.className = "link";
+    a.target = "_blank";
+    container.appendChild(a);
+  });
+</script>
+</body>
+</html>

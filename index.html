@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manit Dangal — Digital Room</title>
+    <meta name="description" content="Enter the zone. The vibe. The lab. A digital symphony made of C++, Python, and late-night ideas." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Custom cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-trail"></div>
+    
+    <!-- Ambient gradient + particles -->
+    <canvas id="particles"></canvas>
+    <div class="ambient-light"></div>
+
+    <header class="site-header">
+      <div class="brand">Manit Dangal</div>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#universe">Universe</a>
+        <a href="#guitar">Guitar</a>
+        <a href="#socials">Socials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button class="menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Parallax layers -->
+    <div class="parallax">
+      <div class="layer layer-1" data-depth="0.05"></div>
+      <div class="layer layer-2" data-depth="0.12"></div>
+      <div class="layer layer-3" data-depth="0.25"></div>
+    </div>
+
+    <main>
+      <!-- HERO / WELCOME -->
+      <section id="hero" class="section hero">
+        <div class="hero-inner">
+          <div class="greeting reveal">
+            <h1>Enter the zone.<br />The vibe.<br />The <span class="name">lab</span>.</h1>
+            <p class="subtitle">Where curiosity breaks gravity.</p>
+          </div>
+
+          <div class="hero-visuals reveal">
+            <div class="floating-guitar" aria-hidden="true">
+              <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+                <path d="M30 20 L30 80 M30 30 L70 30 M30 50 L70 50 M30 70 L70 70 M50 20 L50 30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="4" fill="currentColor"/>
+                <circle cx="60" cy="40" r="4" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="code-particles">
+              <span class="particle">&lt;/&gt;</span>
+              <span class="particle">{ }</span>
+              <span class="particle">( )</span>
+              <span class="particle">[ ]</span>
+            </div>
+          </div>
+
+          <div class="soundbar reveal" aria-hidden="true">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>scroll</span>
+          <div class="mouse"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME -->
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="card glass reveal">
+            <h2>Who am I?</h2>
+            <p class="lead">
+              I'm <strong>Manit Dangal</strong> — a curious human who loves guitar, coding, making random projects, vibing with tech, and creating digital art through code.
+            </p>
+            <p>
+              A mix of logic + chaos. A kid who grew up hacking together ideas, grew into someone who builds things that feel alive.
+            </p>
+            <p class="poem">
+              My mind is a room full of glowing code and half-finished dreams.<br />
+              I build projects the same way I play guitar — with rhythm, chaos, and heart.<br />
+              A digital symphony made of C++, Python, and late-night ideas.
+            </p>
+          </div>
+
+          <div class="digital-symphony reveal">
+            <h3>Digital Symphony</h3>
+            <p>How coding + music blend in my universe.</p>
+            <div class="symphony-grid">
+              <div class="symphony-item">
+                <div class="icon">🎸</div>
+                <h4>Guitar</h4>
+                <p>Strings, chords, and late-night riffs. Music as debugging for the soul.</p>
+              </div>
+              <div class="symphony-item">
+                <div class="icon">💻</div>
+                <h4>Code</h4>
+                <p>Python, C++, Java, HTML/CSS — shaping ideas into little universes.</p>
+              </div>
+              <div class="symphony-item">
+                <div class="icon">⚡</div>
+                <h4>Vibe-Coding</h4>
+                <p>Coding at 2AM when life feels unreal. Where magic happens.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-section reveal">
+            <h3>How I Grew Up With Tech</h3>
+            <div class="timeline-line"></div>
+            <ul class="timeline-moments">
+              <li class="timeline-moment">
+                <span class="dot"></span>
+                <div class="moment-content">
+                  <h4>First touch of code</h4>
+                  <p>Hello world() — the first commit.</p>
+                </div>
+              </li>
+              <li class="timeline-moment">
+                <span class="dot"></span>
+                <div class="moment-content">
+                  <h4>Guitar entered my life</h4>
+                  <p>Found melodies hiding in the silence.</p>
+                </div>
+              </li>
+              <li class="timeline-moment">
+                <span class="dot"></span>
+                <div class="moment-content">
+                  <h4>Started building projects</h4>
+                  <p>From breaking code to fixing it — the loop began.</p>
+                </div>
+              </li>
+              <li class="timeline-moment">
+                <span class="dot"></span>
+                <div class="moment-content">
+                  <h4>Content creation era</h4>
+                  <p>TikTok, YouTube — sharing the vibe with the world.</p>
+                </div>
+              </li>
+              <li class="timeline-moment">
+                <span class="dot"></span>
+                <div class="moment-content">
+                  <h4>Unreal Engine modding</h4>
+                  <p>Where games meet code — pure creativity.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY UNIVERSE / PROJECTS -->
+      <section id="universe" class="section universe">
+        <div class="container">
+          <h2 class="reveal">My Universe</h2>
+          <p class="section-subtitle reveal">Projects that feel alive</p>
+          <div class="projects-grid">
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">🔌</div>
+              <h3>ESP8266 Home Automation</h3>
+              <p>Smart home experiments with ESP boards — controlling lights, sensors, and chaos.</p>
+              <div class="tags">
+                <span>ESP8266</span>
+                <span>IoT</span>
+                <span>Arduino</span>
+              </div>
+            </div>
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">🎮</div>
+              <h3>Unreal Engine Mods</h3>
+              <p>Custom mods and tweaks for Unreal Engine — where games meet code.</p>
+              <div class="tags">
+                <span>C++</span>
+                <span>Unreal</span>
+                <span>Modding</span>
+              </div>
+            </div>
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">🐍</div>
+              <h3>Python Tools</h3>
+              <p>Random Python scripts that solve problems I didn't know I had.</p>
+              <div class="tags">
+                <span>Python</span>
+                <span>Automation</span>
+                <span>Tools</span>
+              </div>
+            </div>
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">🎵</div>
+              <h3>AI Music Tools</h3>
+              <p>Generating songs with AI — blending code and creativity.</p>
+              <div class="tags">
+                <span>AI</span>
+                <span>Music</span>
+                <span>Python</span>
+              </div>
+            </div>
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">✨</div>
+              <h3>Cool Sh!ts</h3>
+              <p>Spontaneous projects at 2AM — chaos mode, carefully controlled.</p>
+              <div class="tags">
+                <span>Random</span>
+                <span>Experiments</span>
+                <span>Vibes</span>
+              </div>
+            </div>
+            <div class="project-card glass tilt-card reveal" data-tilt>
+              <div class="project-icon">🌐</div>
+              <h3>Web Experiments</h3>
+              <p>Interactive web experiences — where design meets code.</p>
+              <div class="tags">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GUITAR CORNER -->
+      <section id="guitar" class="section guitar-corner">
+        <div class="container">
+          <div class="guitar-content glass reveal">
+            <h2>Guitar Corner</h2>
+            <p class="quote">"Strings, code, and a little bit of chaos."</p>
+            <div class="waveform-container">
+              <div class="waveform">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+              </div>
+            </div>
+            <p class="guitar-text">
+              Music flows through my fingers the same way code flows through my keyboard.
+              Late-night riffs and debugging sessions — they're the same energy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIAL UNIVERSE -->
+      <section id="socials" class="section socials">
+        <div class="container">
+          <h2 class="reveal">Social Universe</h2>
+          <p class="section-subtitle reveal">Find me where the vibes go viral.</p>
+          <div class="social-grid">
+            <a class="social-card glass reveal" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+              <div class="social-icon-wrapper">
+                <svg class="social-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+              </div>
+              <span>TikTok</span>
+            </a>
+            <a class="social-card glass reveal" href="#" target="_blank" rel="noopener" aria-label="YouTube">
+              <div class="social-icon-wrapper">
+                <svg class="social-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </div>
+              <span>YouTube</span>
+            </a>
+            <a class="social-card glass reveal" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+              <div class="social-icon-wrapper">
+                <svg class="social-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="form-wrap glass reveal">
+            <h2>Leave Me a Message</h2>
+            <p class="form-subtitle">Let's vibe together.</p>
+            <form id="message-form" novalidate>
+              <div class="field">
+                <input type="text" id="name" required placeholder=" " />
+                <label for="name">Your name</label>
+              </div>
+              <div class="field">
+                <input type="email" id="email" required placeholder=" " />
+                <label for="email">Email</label>
+              </div>
+              <div class="field">
+                <textarea id="message" rows="5" required placeholder=" "></textarea>
+                <label for="message">Your message</label>
+              </div>
+              <button type="submit" class="btn">Send</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Built with curiosity • © <span id="year"></span> Manit Dangal
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
